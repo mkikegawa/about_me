@@ -1,6 +1,18 @@
 require 'pry'
 
 class Person
+
+  attr_accessor  :name, :address, :city, :state, :zipcode, :email, :phone
+  def initialize(args = {})
+    @name    = args[:name]
+    @address = args[:address]
+    @city    = args[:city]
+    @state   = args[:state]
+    @zipcode = args[:zipcode]
+    @email   = args[:email]
+    @phone   = args[:phone]
+  end
+
   def self.get_user_name
     puts "What's your name?"
     gets.chomp.capitalize
@@ -34,16 +46,5 @@ class Person
   def self.get_phone
     puts "What is your phone number?"
     get.chomp.to_s
-  end
-
-  attr_accessor  :name, :address, :city, :state, :zipcode, :email, :phone
-  def initialize(args = {})
-    @name          = args[:name]
-    @address       = args[:address]
-    @city          = args[:city]
-    @state         = args[:state]
-    @zipcode       = args[:zipcode]
-    @email         = args[:email]
-    @phone         = args[:phone]
   end
 end
