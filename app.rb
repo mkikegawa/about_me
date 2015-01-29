@@ -14,4 +14,3 @@ get '/contact' do
   @person = me
   erb :contact
 end
-
